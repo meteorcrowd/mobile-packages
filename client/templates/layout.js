@@ -6,6 +6,11 @@ Template.layout.events({
           onSuccess(data);
         }
       });
+    },
+    "click .story-link": function (event) {
+        event.preventDefault();
+
+        Router.go('addStory');
     }
   });
 
