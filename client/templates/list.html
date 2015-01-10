@@ -1,0 +1,9 @@
+<template name="list">
+  {{#each photos}}
+    <div class="card">
+      <a href="/map/{{_id}}" class="item item-image">
+        <img src="{{image}}" />
+      </a>
+    </div>
+  {{/each}}
+</template>
