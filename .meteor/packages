@@ -15,4 +15,5 @@ mdg:geolocation
 mdg:camera
 autopublish
 insecure
+aldeed:geocoder
 

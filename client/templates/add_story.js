@@ -8,6 +8,9 @@ Template.addStory.events({
         var text = $('#story').val();
         console.log(text);
         // Add story to collection
+        var address = Meteor.call("geocode_reverse", latLng);
+        console.log(address.city);
+
         Stories.insert({
             story: text,
             createdAt: new Date(),
