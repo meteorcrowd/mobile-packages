@@ -1,6 +1,19 @@
 Template.addStory.events({
-    'click button': function () {
-        text = $('#story').val();
-        Stories.add({story: text});
+    'click #add_story': function () {
+        console.log("clicked");
+        // Fetch text as a var from textaread
+        var text = $('#story').val();
+        console.log(text);
+        // Add story to collection
+        Stories.insert({
+            story: text,
+            createdAt: new Date(),
+            location: {
+                lat: latLng.lat,
+                lng: latLng.lng,
+            }
+        });
+        // Clear the textarea
+        $('#story').val("");
     }
 });
