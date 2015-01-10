@@ -13,6 +13,11 @@ Template.addStory.events({
             location: {
                 lat: latLng.lat,
                 lng: latLng.lng,
+                // This following duplication of data is necessary
+                // to keep the semantic lat, lng values
+                // as separate attributes
+                // while enabling the Mongo spatial index
+                coordinatesIndex: [latLng.lng, latLng.lat]
             }
         };
 
