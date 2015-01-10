@@ -1,19 +1,4 @@
-/*  onSuccess = function (imageData) {
-    var latLng = Geolocation.latLng();
-
-    if (! latLng) {
-      return;
-    }
-
-    Photos.insert({
-      image: imageData,
-      createdAt: new Date(),
-      marker: {
-        lat: latLng.lat,
-        lng: latLng.lng,
-        infoWindowContent: "<img width='100' src='" + imageData + "' />"
-      }
-    });
-
-    Router.go("/list");
-  };*/
+// https://github.com/meteor/mobile-packages/tree/master/packages/mdg:geolocation
+// A reactive var needs to be instantiated first.
+// We call the function when the app loads
+Geolocation.latLng();
