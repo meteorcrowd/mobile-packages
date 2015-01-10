@@ -33,3 +33,9 @@ https://github.com/lacymorrow/init-famous/tree/master/interface-demos/Steller
 Geolocation
 *********
 https://github.com/zeroasterisk/meteor-cordova-geolocation-background
+
+*********
+Push notifications
+*********
+https://github.com/raix/push
+https://github.com/richsilv/meteor-cordova-notifications
