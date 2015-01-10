@@ -24,6 +24,12 @@ http://www.slideshare.net/andrewreedy/rapid-mobile-development-with-meteorjs
 https://github.com/andrewreedy/meteor-visit-tracker
 
 *********
+Sliding view
+*********
+
+https://github.com/lacymorrow/init-famous/tree/master/interface-demos/Steller
+
+*********
 Geolocation
 *********
 https://github.com/zeroasterisk/meteor-cordova-geolocation-background
