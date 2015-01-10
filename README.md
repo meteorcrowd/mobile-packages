@@ -1,42 +1,40 @@
-Mobile Packages
-===============
+Devshop Demo for Meteor Mobile: SoLoMo
+======================================
 
-This repository contains three simple Meteor packages that work on mobile and desktop. There are also three small example apps that demonstrate their usage.
+> Making Social, Local, Mobile Easier than Ever Before!
 
-These packages work with Meteor 0.9.2 and above.
+<img src="screenshot.jpg" width="300" />
 
-## Packages
+The developers at [Meteor](https://www.meteor.com/) have been hard at work building mobile support into the framework. Our goal is to make Meteor the easiest, fastest, and best way to build a great cross-platform application. This is an app we showed at Meteor Devshop August 2014 to demonstrate some of the features of the initial preview release of mobile support for Meteor.
 
-### Camera
+To learn more about making Meteor mobile apps with Cordova, check out [this Hackpad](https://meteor.hackpad.com/Getting-Started-With-Cordova-Z5n6zkVB1xq)!
 
-The package `mdg:camera` allows you to take photos on desktop and mobile with a single function call.
+## Running the App
 
-[Read the full Camera documentation here.](https://github.com/meteor/mobile-packages/blob/master/packages/mdg:camera/README.md)
+First install the [Meteor Web Framework](https://www.meteor.com/), then pick a platform and run the appropriate commands!
 
-### Geolocation
+### Web Browser
 
-The package `mdg:geolocation` provides a reactive interface to the device's GPS location.
+`meteor`, then go to the indicated URL in your preferred web browser.
 
-[Read the full Geolocation documentation here.](https://github.com/meteor/mobile-packages/blob/master/packages/mdg:geolocation/README.md)
+### Android Simulator
 
-### reload-on-resume
+`meteor run android`, the simulator should open automatically. The simulator is currently quite slow, we are working on improving the installation process to configure faster simulation.
 
-The package `mdg:reload-on-resume` delays hot code push on mobile devices until the user has closed and re-opened the app, so that their experience is not interrupted by a reload.
+### iOS Simulator (Mac Only)
 
-[Read the full reload-on-resume documentation here.](https://github.com/meteor/mobile-packages/blob/master/packages/mdg:reload-on-resume/README.md)
+`meteor run ios`, the simulator should open automatically. You may be prompted to install Xcode to get the simulator if you don't have it.
 
-## Example Apps
+### Android Device
 
-### simple-photo
+1. [enable USB Debug Mode](http://developer.android.com/tools/device.html#developer-device-options) on your Android Device.
+2. Make sure your Android device is connected to the same WiFi network as your computer.
+3. Find out your computer's IP address - the device needs this to be able to connect to your development server.
+4. `meteor run android-device -p <ip address>:3000`
 
-This example app has one button that takes a photo and displays it on the screen. It demonstrates usage of the Camera package.
+### iOS Device (Mac Only, Need to be Member of iOS Developer Program)
 
-### simple-map
-
-This example app uses the [Google Maps Static Maps API](https://developers.google.com/maps/documentation/staticmaps/) to show a map with a marker at your current location. It demonstrates usage of the Geolocation package.
-
-### SoLoMo
-
-This is the app that was first used to demonstrate Meteor Cordova functionality at the Meteor Devshop in August 2014. It uses the Camera, Geolocation, and reload-on-resume packages, in addition to local packages for [Ionic Framework CSS](http://ionicframework.com/) and a simple implementation of the [Google Maps Javascript API](https://developers.google.com/maps/documentation/javascript/).
-
-<img src="examples/solomo/screenshot.jpg" width="300" />
+1. Make sure your iOS device is connected to the same WiFi network as your computer.
+2. Find out your computer's IP address - the device needs this to be able to connect to your development server.
+3. `meteor run ios-device -p <ip address>:3000`, this command will open Xcode with the relevant project.
+4. Use Xcode to run the app on your device.
