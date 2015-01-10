@@ -1,4 +1,4 @@
-  onSuccess = function (imageData) {
+/*  onSuccess = function (imageData) {
     var latLng = Geolocation.latLng();
 
     if (! latLng) {
@@ -16,4 +16,4 @@
     });
 
     Router.go("/list");
-  };
+  };*/

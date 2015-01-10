@@ -1,5 +1,5 @@
   Template.list.helpers({
-    photos: function () {
-      return Photos.find({}, {sort: {"createdAt": -1}});
+    stories: function () {
+      return Stories.find({}, {sort: {"createdAt": -1}});
     }
   });

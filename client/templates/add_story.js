@@ -1,6 +1,9 @@
 Template.addStory.events({
     'click #add_story': function () {
         console.log("clicked");
+        // Fetch current location
+        var latLng = Geolocation.latLng();
+        console.log(latLng);
         // Fetch text as a var from textaread
         var text = $('#story').val();
         console.log(text);

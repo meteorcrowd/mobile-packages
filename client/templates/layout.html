@@ -1,23 +1,11 @@
 <template name="layout">
-  <div class="bar bar-header bar-stable">
-    <h1 class="title">Stories</h1>
-    <button class="button button-clear pull-right story-link button-positive">Add Story</button>
-  </div>
+    <div class="bar bar-header bar-stable">
+        <h1 class="title">Stories</h1>
+        <button class="button button-clear pull-right story-link button-positive">Add Story</button>
+    </div>
 
-  <div class="content">
-    {{> yield}}
-  </div>
+    <div class="content">
+        {{> yield}}
+    </div>
 
-<!--
-  <div class="tabs tabs-icon-top">
-    <a class="tab-item {{#if onPage 'map'}}positive{{/if}} {{#if onPage 'mapWithPhoto'}}positive{{/if}}" href="/">
-      <i class="icon ion-map"></i>
-      Map
-    </a>
-    <a class="tab-item {{#if onPage 'list'}}positive{{/if}}" href="/list">
-      <i class="icon ion-navicon"></i>
-      List
-    </a>
-  </div>
--->
 </template>
