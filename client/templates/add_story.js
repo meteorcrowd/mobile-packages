@@ -17,7 +17,7 @@ Template.addStory.events({
                 // to keep the semantic lat, lng values
                 // as separate attributes
                 // while enabling the Mongo spatial index
-                coordinatesIndex: [latLng.lng, latLng.lat]
+                longLatIndex: [latLng.lng, latLng.lat]
             }
         };
 
