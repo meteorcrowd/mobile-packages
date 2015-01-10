@@ -22,3 +22,8 @@ Famo.us is a free, open source JavaScript framework that helps you create smooth
 
 http://www.slideshare.net/andrewreedy/rapid-mobile-development-with-meteorjs
 https://github.com/andrewreedy/meteor-visit-tracker
+
+*********
+Geolocation
+*********
+https://github.com/zeroasterisk/meteor-cordova-geolocation-background
