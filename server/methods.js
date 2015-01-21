@@ -23,11 +23,36 @@ Meteor.methods({
         story.location = Meteor.call( "geocodeReverse", story.location );
 
         // Attributes for the spatial index
-        // TODO: are the coordinates array and the individual longitude/latitude values all necessary?
-        story.location.type =  "Point";
-        story.location.coordinates = [story.location.longitude, story.location.latitude];
+
+        // parse values to floats
+        var longitude = parseFloat(story.location.longitude);
+        var latitude = parseFloat(story.location.latitude);
+
+        // Add Geo JSON to location
+        story.location.index = {
+            "type": "Point",
+            "coordinates": [longitude, latitude]
+        };
 
         // Save the story into the stories collection
         Stories.insert( story ) ;
+    },
+    'getNearbyStories': function (location) {
+        /*
+    * Takes an array of coordinates in longitude/latitude format
+    * min/max distance expressed in meters
+    * returns nearest stories
+    */
+        var parameters;
+        parameters = {
+            geometry: {
+                type: "Point" ,
+                // array of longitude/latitude
+                coordinates: coordinates
+            },
+            $maxDistance: 10000,
+            $minDistance: 0
+        }
+        return  Stories.find({ loc : {$near: parameters } });
     }
 });
