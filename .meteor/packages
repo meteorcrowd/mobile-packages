@@ -13,7 +13,7 @@ google-maps
 mdg:reload-on-resume
 mdg:geolocation
 mdg:camera
-autopublish
 insecure
 aldeed:geocoder
+natestrauser:font-awesome
 
