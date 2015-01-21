@@ -22,6 +22,11 @@ Meteor.methods({
         // add reverse geolocation to story. E.g. city, country, etc.
         story.location = Meteor.call( "geocodeReverse", story.location );
 
+        // Attributes for the spatial index
+        // TODO: are the coordinates array and the individual longitude/latitude values all necessary?
+        story.location.type =  "Point";
+        story.location.coordinates = [story.location.longitude, story.location.latitude];
+
         // Save the story into the stories collection
         Stories.insert( story ) ;
     }
