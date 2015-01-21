@@ -1,6 +1,10 @@
 Template.list.helpers({
     stories: function () {
-        return Stories.find({}, {sort: {"createdAt": -1}});
+        // TODO: get a list of stories sorted by nearest location
+        //return Meteor.call("getNearbyStories", coordinates);
+
+        // Return a list of stories
+        return Stories.find();
     },
     moment: function(date) {
         return moment(date).fromNow();
