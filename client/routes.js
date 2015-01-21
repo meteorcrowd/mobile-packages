@@ -5,7 +5,6 @@ Router.configure({
 
 Router.map(function() {
     this.route('list', {
-        name: 'storyList',
         path: '/'
     })
 });
