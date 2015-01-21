@@ -11,13 +11,9 @@ Template.addStory.events({
             story: text,
             createdAt: new Date(),
             location: {
+                // coordinates to pass into the geolocation function
                 lat: latLng.lat,
-                lng: latLng.lng,
-                // This following duplication of data is necessary
-                // to keep the semantic lat, lng values
-                // as separate attributes
-                // while enabling the Mongo spatial index
-                longLatIndex: [latLng.lng, latLng.lat]
+                lng: latLng.lng
             }
         };
 
