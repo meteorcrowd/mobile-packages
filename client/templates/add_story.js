@@ -22,5 +22,8 @@ Template.addStory.events({
 
         // Clear the textarea
         $('#story').val("");
+
+        // Route to the stories list
+        Router.go('list');
     }
 });
