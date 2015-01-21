@@ -6,4 +6,4 @@ About
 --------
 This app acts as a simple memory bank for the places around us. We share stories, as echos of our experience that others can enjoy.
 
-Try the [online demo](http://storyplaces.meteor.com/).
+See the stories around you. Try the [online demo](http://storyplaces.meteor.com/).
