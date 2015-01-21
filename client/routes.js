@@ -1,9 +1,11 @@
 Router.configure({
-    layoutTemplate: "layout"
+    layoutTemplate: "layout",
+    waitOn: Geolocation.currentLocation()
 });
 
 Router.map(function() {
     this.route('list', {
+        name: 'storyList',
         path: '/'
     })
 });
